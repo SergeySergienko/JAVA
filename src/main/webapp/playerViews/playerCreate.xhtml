@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 09.09.2016
+  Time: 7:42
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+
+<h:body>
+    <ui:composition template="/index.xhtml">
+        <ui:define name="main_body">
+            <h4>PLAYER CREATING FORM</h4>
+            <h:form>
+                <table>
+                    <tr>
+                        <td>ID игрока:</td>
+                        <td>
+                            <h:inputText label="Player id" id="playerId" value="#{player.id}" required="false"/>
+                            (не заполнять, если создаете нового)
+                            <h:message for="playerId"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Фамилия:</td>
+                        <td>
+                            <h:inputText label="Player l_name" id="playerL_name" value="#{player.l_name}" required="false"/>
+                            <h:message for="playerL_name"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Имя:</td>
+                        <td>
+                            <h:inputText label="Player f_name" id="playerF_name" value="#{player.f_name}" required="false"/>
+                            <h:message for="playerF_name"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Отчество:</td>
+                        <td>
+                            <h:inputText label="Player m_name" id="playerM_name" value="#{player.m_name}" required="false"/>
+                            <h:message for="playerM_name"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Дата рождения:</td>
+                        <td>
+                            <h:inputText label="Player birthday" id="playerBirthday" value="#{player.birthday}" required="false">
+                                <f:convertDateTime pattern="dd.MM.yyyy"/>
+                        </h:inputText> (дд.мм.гггг)
+                            <h:message for="playerBirthday"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Амплуа:</td>
+                        <td>
+                            <h:inputText label="Player emploi" id="playerEmploi" value="#{player.emploi}" required="false"/>
+                            <h:message for="playerEmploi"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <h:commandButton action="#{player.getPlayerById}" value="Найти" disabled="false"/>
+                <h:commandButton action="/playerViews/playerCreateConfirm?faces-redirect=true" value="Создать" disabled="false"/>
+                <h:commandButton action="/index?faces-redirect=true" value="Отмена"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

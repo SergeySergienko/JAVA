@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 05.10.2016
+  Time: 16:51
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>DEMO</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/demo.css"/>
+    <script type="text/javascript" src="../resources/js/demo.js"></script>
+</h:head>
+
+<h:body>
+    <div id="container">
+
+        <div id="header">Шапка сайта
+        </div>
+        <div id="navigation">Блок навигации
+        </div>
+        <div id="menu">Блок меню
+            <ul>
+                <li><a href="#" title="Кубки">КУБКИ</a></li>
+                <li><a href="#" title="Команды">КОМАНДЫ</a></li>
+                <li><a href="#" title="клик - вызвать подменю, двойной клик - отмена" onclick="player();" ondblclick="delet()">ИГРОКИ</a></li>
+                <li><a href="#" title="Заявки">ЗАЯВКИ</a></li>
+                <li><a href="#" title="Игры">ИГРЫ</a></li>
+            </ul>
+            <div id="player">
+                <a href="#">Найти</a>
+                <a href="#">Создать</a>
+                <a href="#">Редактировать</a>
+                <a href="#">Удалить</a>
+            </div>
+        </div>
+
+        <div id="content">Контент
+            <!--<ui:repeat value="#{team.allTeams}" var="t">-->
+            <!--<h:panelGrid columns="2">-->
+            <!--<f:facet name="header">ID</f:facet>-->
+            <!--#{t.id}-->
+            <!--<f:facet name="header">КОМАНДА</f:facet>-->
+            <!--#{t.name}-->
+            <!--</h:panelGrid>-->
+
+            <!--</ui:repeat>-->
+        </div>
+        <div id="clear"></div>
+        <div id="footer">Подвал сайта
+        </div>
+    </div>
+</h:body>
+
+</html>

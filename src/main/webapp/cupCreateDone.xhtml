@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 27.08.2016
+  Time: 10:45
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/style_training.css"/>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h4 style="color: red">DONE FORM</h4>
+        <table>
+            <tr>
+                <td>Created Cup number:</td>
+                <td>
+                    <h:outputText value="#{cup.id}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Created Cup season:</td>
+                <td>
+                    <h:outputText value="#{cup.season}"/>
+                </td>
+            </tr>
+        </table>
+        <h:commandButton action="index_training" value="Вернуться в главное меню"/>
+    </h:form>
+</h:body>
+
+</html>

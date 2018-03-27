@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <h3 align="left">"КУБОК ФК УНИВЕР"</h3>
+
+    <h3 align="right">Текущий номер Кубка: <i><h:outputText value="#{cup.currentCup.id}"/></i>
+        сезон: <i><h:outputText value="#{cup.currentCup.season}"/></i></h3>
+
+    <title>Кубок ФК Универ</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/style_training.css"/>
+    <ul>
+        <li><a href="#">КУБОК</a>
+            <ul>
+                <li><a href="cupInputForCreate.xhtml">Создать новый</a></li>
+                <li><a href="#">Редактировать</a></li>
+                <li><a href="cupDelete.xhtml">Удалить</a></li>
+                <li><a href="cupInputForShow.xhtml">Статистика</a></li>
+            </ul>
+        </li>
+        <li><a href="#">КОМАНДА</a>
+            <ul>
+                <li><a href="teamCreate.xhtml">Создать новую</a></li>
+                <li><a href="#">Редактировать</a></li>
+                <li><a href="teamShowMenu.xhtml">Статистика</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ИГРОК</a>
+            <ul>
+                <li><a href="#">Создать нового</a></li>
+                <li><a href="#">Редактировать</a></li>
+                <li><a href="#">Статистика</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ЗАЯВКА</a>
+            <ul>
+                <li><a href="petitionCreate.xhtml">Создать новую</a></li>
+                <li><a href="#">Редактировать</a></li>
+                <li><a href="#">Просмотреть</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ИГРЫ</a>
+            <ul>
+                <li><a href="#">Протокол</a></li>
+                <li><a href="#">Видео</a></li>
+                <li><a href="#">Комментарии</a></li>
+            </ul>
+        </li>
+        <li><a href="#">СПРАВОЧНАЯ</a>
+            <ul>
+                <li><a href="#">Регламент</a></li>
+                <li><a href="#">Схема розыгрыша</a></li>
+                <li><a href="#">Расписание игр</a></li>
+                <li><a href="#">Турнирная таблица</a></li>
+            </ul>
+        </li>
+        <li><a href="#">НОВОСТИ</a></li>
+        <li><a href="#">КОНТАКТЫ</a></li>
+    </ul>
+
+</h:head>
+<body>
+    <ui:insert name="body_1">
+
+    </ui:insert>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 04.10.2016
+  Time: 18:55
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<f:view>
+    <h:head>
+        <title><ui:insert name="title"/></title>
+    </h:head>
+
+    <h:body>
+        <f:facet name="last">
+            <!--<h:outputScript library="" name="" target=""/>-->
+            <h:outputStylesheet library="css" name="main.css"/>
+        </f:facet>
+
+        <div class="header">
+            <ui:include src="/templates/header.xhtml"/>
+        </div>
+        <div id="wrap">
+            <ui:include src="/templates/logo.xhtml"/>
+
+            <div class="content">
+                <ui:include src=""/>
+
+                <div class="right-content">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="footer_blank"></div>
+        </div>
+        <ui:include src="/templates/footer.xhtml"/>
+    </h:body>
+</f:view>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Кубок ФК Универ</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css"/>
+    <h3 align="center">"КУБОК ФК УНИВЕР"</h3>
+    <h:form>
+        <h3 class="leftstr">Текущий номер Кубка: <i><h:outputText value="#{cup.currentCup.id}"/></i></h3>
+        <h3 class="rightstr"> сезон: <i><h:outputText value="#{cup.currentCup.season}"/></i></h3>
+        <div class="clearfix"></div>
+    </h:form>
+    <div class="menu" id="menu_hor">
+        <ul>
+            <li><a href="#">ГЛАВНАЯ</a></li>
+            <li><a href="#">СПРАВОЧНАЯ</a></li>
+            <li><a href="#">НОВОСТИ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+
+    <hr size="6" style="background-color: red" width="100%"/>
+</h:head>
+
+<body bgcolor="#faff90">
+<ui:insert name="main_body">
+    <div class="layout">
+        <div class="sidebar">
+            <div class="menu">
+                <ul>
+                    <li><a href="templates/main.xhtml">КУБКИ</a></li>
+                    <li><a href="teamShowMenu.xhtml">КОМАНДЫ</a></li>
+                    <li><a href="playerViews/playerCreate.xhtml">ИГРОКИ</a></li>
+                    <li><a href="#">ЗАЯВКИ</a></li>
+                    <li><a href="#">ИГРЫ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            Здесь идут какие-то свежие новости ...
+            Бла-бла-бла ...
+        </div>
+    </div>
+</ui:insert>
+</body>
+</html>

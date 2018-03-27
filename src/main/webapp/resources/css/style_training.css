@@ -1,0 +1,109 @@
+/*Место под меню*/
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top: 20px; /*делаем отступ сверху*/
+    background: #faff90; /*добавляем фон всему меню*/
+    height: 20px; /*задаем высоту*/
+    /*width: 160px;*/
+}
+
+li {
+    float: left; /*Размещаем список горизонтально для реализации меню*/
+    position: relative; /*задаем позицию для позиционирования*/
+    width: 168px;
+}
+
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    text-shadow: none;
+    background: green; /*фон к пункту меню*/
+    color: yellow; /*цвет ссылок*/
+    padding: 1px 10px; /*добавляем отступ*/
+    font-family: arial; /*меняем шрифт*/
+    line-height: 20px; /*высота меню по вертикали*/
+    display: block;
+    border-right: 2px solid yellow; /*добавляем бордюр справа*/
+    /*-moz-transition: all 0.3s 0.01s ease; /!*делаем плавный переход*!/*/
+    /*-o-transition: all 0.3s 0.01s ease;*/
+    /*-webkit-transition: all 0.3s 0.01s ease;*/
+}
+
+a:hover {
+    background: yellow; /*добавляем эффект при наведении*/
+    color: green;
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+/*Стили для скрытого выпадающего меню*/
+li > ul {
+    position: absolute;
+    top: 1px; /*отступ выпадающего меню от центра горизонтального меню*/
+    display: none;
+}
+
+/*Делаем скрытую часть видимой*/
+li:hover > ul {
+    display: block;
+    white-space: nowrap;
+}
+
+li:hover > ul > li {
+    float: none; /*Убираем горизонтальное позиционирование*/
+}
+
+i {
+    color: red;
+    font-size: 200%;
+}
+
+body {
+    background-color: #faff90;
+}
+
+/*div {*/
+    /*border: 1px solid black;*/
+    /*width: 217px;*/
+    /*height: 200px;*/
+    /*color: red;*/
+    /*background-color: yellow;*/
+    /*margin-left: 20px;*/
+    /*margin-top: 20px;*/
+    /*padding-top: 0px;*/
+    /*font-size: 14px;*/
+    /*font-family: arial;*/
+    /*text-align: center;*/
+/*}*/
+
+div.scroll-table {
+    width: 217px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    color: black;
+    background-color: #faff90;
+}
+
+.employeeTable{
+    border-collapse:collapse;
+    border:1px solid #000000;
+}
+
+.employeeTableHeader{
+    text-align:center;
+    background:none repeat scroll 0 0 #B5B5B5;
+    border-bottom:1px solid #000000;
+    padding:2px;
+}
+
+.employeeTableOddRow{
+    text-align:center;
+    background:none repeat scroll 0 0 #FFFFFF;
+}
+
+.employeeTableEvenRow{
+    text-align:center;
+    background:none repeat scroll 0 0 #D3D3D3;
+}

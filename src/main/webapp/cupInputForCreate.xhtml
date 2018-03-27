@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 08.09.2016
+  Time: 17:59
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+
+<h:body>
+    <ui:composition template="cupInputForShow.xhtml">
+        <ui:define name="place0"><h2>CUP CREATING form</h2></ui:define>
+        <ui:define name="place1">
+            <tr>
+                <td>Введите сезон Кубка:</td>
+                <td>
+                    <h:inputText label="Cup Season" id="cupSeason" value="#{cup.season}" required="false"/>
+                    <h:message for="cupSeason"/>
+                </td>
+            </tr>
+        </ui:define>
+        <ui:define name="place2">
+            <br/><h:commandButton action="cupCreateConfirm" value="Создать"/>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

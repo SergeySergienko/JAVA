@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 27.08.2016
+  Time: 10:45
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+
+<h:body>
+    <ui:composition template="../index.xhtml">
+        <ui:define name="main_body">
+            <h:form>
+                <h4>CONFIRMATION FORM</h4>
+                <table>
+
+                    <tr>
+                        <td>Фамилия:</td>
+                        <td>
+                            <h:outputText value="#{player.l_name}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Имя:</td>
+                        <td>
+                            <h:outputText value="#{player.f_name}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Отчество:</td>
+                        <td>
+                            <h:outputText value="#{player.m_name}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Дата рождения:</td>
+                        <td>
+                            <h:outputText value="#{player.birthday}">
+                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                            </h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Амплуа:</td>
+                        <td>
+                            <h:outputText value="#{player.emploi}"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <ui:insert name="player_body">
+                    <br/>
+                    <h:commandButton action="/index?faces-redirect=true" value="В Главное Меню"/>
+                </ui:insert>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Сергей
+  Date: 08.09.2016
+  Time: 21:41
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h4>CONFIRMATION FORM</h4>
+        <table>
+            <tr>
+                <td>Вы собираетесь удалить Кубок номер: </td>
+                <td>
+                    <h:outputText value="#{cup.id}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Delete Cup season: </td>
+                <td>
+                    <h:outputText value="#{cup.seasonByCupId}"/>
+                </td>
+            </tr>
+        </table>
+
+        <h:commandButton action="#{cup.deleteConfirmedCup}" value="Confirm"/>
+    </h:form>
+</h:body>
+
+
+</html>
